@@ -1,0 +1,165 @@
+2024/10/23 06:43:10 Made connection to 192.168.86.58
+2024/10/23 06:43:10 ---
+2024/10/23 06:43:10 Setting coordinates of 44.060785, -103.135386 for '5050 Saturn Dr Rapid City SD 57701'.
+2024/10/23 06:43:10 UPDATE address SET lat='44.060785', lng='-103.135386' WHERE address_id = 1
+2024/10/23 06:43:11 ---
+2024/10/23 06:43:11 Setting coordinates of 35.740993, -78.498712 for '4325 Grassy Field Drive Raleigh NC 27610'.
+2024/10/23 06:43:11 UPDATE address SET lat='35.740993', lng='-78.498712' WHERE address_id = 2
+2024/10/23 06:43:11 ---
+2024/10/23 06:43:11 Setting coordinates of 35.785271, -78.368382 for '302 N. Pine Street Wendell NC 27591'.
+2024/10/23 06:43:11 UPDATE address SET lat='35.785271', lng='-78.368382' WHERE address_id = 3
+2024/10/23 06:43:12 ---
+2024/10/23 06:43:12 Score too low (79.000000) to update with coordinates for '1010 Jones Rd Little Town NC 27272'.
+2024/10/23 06:43:12 ---
+2024/10/23 06:43:12 Setting coordinates of 40.720435, -73.958723 for '93 NORTH 9TH STREET Brooklyn NY 11211'.
+2024/10/23 06:43:12 UPDATE address SET lat='40.720435', lng='-73.958723' WHERE address_id = 56
+2024/10/23 06:43:13 ---
+2024/10/23 06:43:13 Setting coordinates of 41.821079, -71.414581 for '380 WESTMINSTER ST Providence RI 02903'.
+2024/10/23 06:43:13 UPDATE address SET lat='41.821079', lng='-71.414581' WHERE address_id = 57
+2024/10/23 06:43:13 ---
+2024/10/23 06:43:13 Setting coordinates of 44.307242, -71.776880 for '177 MAIN STREET Littleton NH 03561'.
+2024/10/23 06:43:13 UPDATE address SET lat='44.307242', lng='-71.776880' WHERE address_id = 58
+2024/10/23 06:43:13 ---
+2024/10/23 06:43:13 Setting coordinates of 44.804841, -68.773546 for '202 HARLOW ST Bangor ME 04401'.
+2024/10/23 06:43:13 UPDATE address SET lat='44.804841', lng='-68.773546' WHERE address_id = 59
+2024/10/23 06:43:14 ---
+2024/10/23 06:43:14 Setting coordinates of 44.550033, -69.628782 for '46 FRONT STREET Waterville ME 04901'.
+2024/10/23 06:43:14 UPDATE address SET lat='44.550033', lng='-69.628782' WHERE address_id = 60
+2024/10/23 06:43:14 ---
+2024/10/23 06:43:14 Setting coordinates of 40.879870, -74.045299 for '22 SUSSEX ST Hackensack NJ 07601'.
+2024/10/23 06:43:14 UPDATE address SET lat='40.879870', lng='-74.045299' WHERE address_id = 61
+2024/10/23 06:43:15 ---
+2024/10/23 06:43:15 Setting coordinates of 40.768059, -73.012062 for '75 OAK STREET Patchogue NY 11772'.
+2024/10/23 06:43:15 UPDATE address SET lat='40.768059', lng='-73.012062' WHERE address_id = 62
+2024/10/23 06:43:15 ---
+2024/10/23 06:43:15 Setting coordinates of 42.653923, -73.750719 for '1 CLINTON AVE Albany NY 12207'.
+2024/10/23 06:43:15 UPDATE address SET lat='42.653923', lng='-73.750719' WHERE address_id = 63
+2024/10/23 06:43:15 ---
+2024/10/23 06:43:15 Setting coordinates of 44.732305, -73.430269 for '7242 ROUTE 9 Plattsburgh NY 12901'.
+2024/10/23 06:43:15 UPDATE address SET lat='44.732305', lng='-73.430269' WHERE address_id = 64
+2024/10/23 06:43:15 ---
+2024/10/23 06:43:15 Setting coordinates of 40.351095, -79.861105 for '520 5TH AVE McKeesport PA 15132'.
+2024/10/23 06:43:15 UPDATE address SET lat='40.351095', lng='-79.861105' WHERE address_id = 65
+2024/10/23 06:43:16 ---
+2024/10/23 06:43:16 Setting coordinates of 40.299550, -79.546034 for '122 W 3RD STREET Greensburg PA 15601'.
+2024/10/23 06:43:16 UPDATE address SET lat='40.299550', lng='-79.546034' WHERE address_id = 66
+2024/10/23 06:43:16 ---
+2024/10/23 06:43:16 Setting coordinates of 40.798488, -77.845323 for '901 UNIVERSITY DR State College PA 16801'.
+2024/10/23 06:43:16 UPDATE address SET lat='40.798488', lng='-77.845323' WHERE address_id = 67
+2024/10/23 06:43:17 ---
+2024/10/23 06:43:17 Setting coordinates of 41.239367, -77.005431 for '240 W 3RD ST Williamsport PA 17701'.
+2024/10/23 06:43:17 UPDATE address SET lat='41.239367', lng='-77.005431' WHERE address_id = 68
+2024/10/23 06:43:18 ---
+2024/10/23 06:43:18 Setting coordinates of 40.605008, -75.465432 for '41 N 4TH ST Allentown PA 18102'.
+2024/10/23 06:43:18 UPDATE address SET lat='40.605008', lng='-75.465432' WHERE address_id = 69
+2024/10/23 06:43:18 ---
+2024/10/23 06:43:18 Setting coordinates of 40.674639, -76.226787 for '2221 W. MARKET STREET Pottsville PA 17901'.
+2024/10/23 06:43:18 UPDATE address SET lat='40.674639', lng='-76.226787' WHERE address_id = 70
+2024/10/23 06:43:19 ---
+2024/10/23 06:43:19 Setting coordinates of 38.893876, -76.850030 for '337 BRIGHTSEAT ROAD Hyattsville MD 20785'.
+2024/10/23 06:43:19 UPDATE address SET lat='38.893876', lng='-76.850030' WHERE address_id = 71
+2024/10/23 06:43:20 ---
+2024/10/23 06:43:20 Setting coordinates of 39.605078, -75.787807 for '101 CHESAPEAKE BLVD Elkton MD 21921'.
+2024/10/23 06:43:20 UPDATE address SET lat='39.605078', lng='-75.787807' WHERE address_id = 72
+2024/10/23 06:43:20 ---
+2024/10/23 06:43:20 Setting coordinates of 36.821810, -76.071799 for '2875 SABRE ST Virginia Beach VA 23452'.
+2024/10/23 06:43:20 UPDATE address SET lat='36.821810', lng='-76.071799' WHERE address_id = 73
+2024/10/23 06:43:21 ---
+2024/10/23 06:43:21 Setting coordinates of 36.622180, -78.552627 for '324 COMMERCE ROAD Clarksville VA 23927'.
+2024/10/23 06:43:21 UPDATE address SET lat='36.622180', lng='-78.552627' WHERE address_id = 74
+2024/10/23 06:43:21 ---
+2024/10/23 06:43:21 Setting coordinates of 36.950766, -81.063528 for '1480 EAST MAIN STREET Wytheville VA 24382'.
+2024/10/23 06:43:21 UPDATE address SET lat='36.950766', lng='-81.063528' WHERE address_id = 75
+2024/10/23 06:43:22 ---
+2024/10/23 06:43:22 Setting coordinates of 37.275007, -79.940772 for '116 N JEFFERSON STREET Roanoke VA 24016'.
+2024/10/23 06:43:22 UPDATE address SET lat='37.275007', lng='-79.940772' WHERE address_id = 76
+2024/10/23 06:43:22 ---
+2024/10/23 06:43:22 Setting coordinates of 37.431525, -81.585316 for '50 MCDOWELL STREET Welch WV 24801'.
+2024/10/23 06:43:22 UPDATE address SET lat='37.431525', lng='-81.585316' WHERE address_id = 77
+2024/10/23 06:43:23 ---
+2024/10/23 06:43:23 Setting coordinates of 37.671392, -82.278010 for '146 EAST FIRST AVE Williamson WV 25661'.
+2024/10/23 06:43:23 UPDATE address SET lat='37.671392', lng='-82.278010' WHERE address_id = 78
+2024/10/23 06:43:23 ---
+2024/10/23 06:43:23 Setting coordinates of 35.349083, -80.163421 for '1925 E MAIN ST Albemarle NC 28001'.
+2024/10/23 06:43:23 UPDATE address SET lat='35.349083', lng='-80.163421' WHERE address_id = 79
+2024/10/23 06:43:23 ---
+2024/10/23 06:43:23 Setting coordinates of 35.485914, -79.199866 for '1013 SPRING LANE Sanford NC 27330'.
+2024/10/23 06:43:23 UPDATE address SET lat='35.485914', lng='-79.199866' WHERE address_id = 80
+2024/10/23 06:43:24 ---
+2024/10/23 06:43:24 Setting coordinates of 35.057670, -78.878314 for '145 ROWAN STREET Fayetteville NC 28301'.
+2024/10/23 06:43:24 UPDATE address SET lat='35.057670', lng='-78.878314' WHERE address_id = 81
+2024/10/23 06:43:25 ---
+2024/10/23 06:43:25 Setting coordinates of 35.097685, -77.093784 for '1420 MCCARTHY BLVD New Bern NC 28562'.
+2024/10/23 06:43:25 UPDATE address SET lat='35.097685', lng='-77.093784' WHERE address_id = 82
+2024/10/23 06:43:26 ---
+2024/10/23 06:43:26 Setting coordinates of 34.215968, -82.164433 for '115 ENTERPRISE COURT Greenwood SC 29649'.
+2024/10/23 06:43:26 UPDATE address SET lat='34.215968', lng='-82.164433' WHERE address_id = 83
+2024/10/23 06:43:26 ---
+2024/10/23 06:43:26 Setting coordinates of 31.457208, -83.522933 for '732 W 2ND ST Tifton GA 31793'.
+2024/10/23 06:43:26 UPDATE address SET lat='31.457208', lng='-83.522933' WHERE address_id = 84
+2024/10/23 06:43:26 ---
+2024/10/23 06:43:26 Setting coordinates of 30.154944, -85.662461 for '97 WEST OAK AVE Panama City FL 32401'.
+2024/10/23 06:43:26 UPDATE address SET lat='30.154944', lng='-85.662461' WHERE address_id = 85
+2024/10/23 06:43:27 ---
+2024/10/23 06:43:27 Setting coordinates of 26.156006, -80.136817 for '2276 WILTON DR Fort Lauderdale FL 33305'.
+2024/10/23 06:43:27 UPDATE address SET lat='26.156006', lng='-80.136817' WHERE address_id = 86
+2024/10/23 06:43:28 ---
+2024/10/23 06:43:28 Setting coordinates of 34.801090, -87.670287 for '203 SOUTH WALNUT ST Florence AL 35630'.
+2024/10/23 06:43:28 UPDATE address SET lat='34.801090', lng='-87.670287' WHERE address_id = 87
+2024/10/23 06:43:29 ---
+2024/10/23 06:43:29 Setting coordinates of 36.569252, -87.306790 for '108 CENTER POINTE DR Clarksville TN 37040'.
+2024/10/23 06:43:29 UPDATE address SET lat='36.569252', lng='-87.306790' WHERE address_id = 88
+2024/10/23 06:43:30 ---
+2024/10/23 06:43:30 Setting coordinates of 36.415633, -89.077626 for '1800 OLD TROY RD Union City TN 38261'.
+2024/10/23 06:43:30 UPDATE address SET lat='36.415633', lng='-89.077626' WHERE address_id = 89
+2024/10/23 06:43:31 ---
+2024/10/23 06:43:31 Setting coordinates of 35.697579, -85.780108 for '931 OLD SMITHVILLE HWY McMinnville TN 37110'.
+2024/10/23 06:43:31 UPDATE address SET lat='35.697579', lng='-85.780108' WHERE address_id = 90
+2024/10/23 06:43:31 ---
+2024/10/23 06:43:31 Setting coordinates of 39.425115, -81.425684 for '1301 GREENE STREET Marietta OH 45750'.
+2024/10/23 06:43:31 UPDATE address SET lat='39.425115', lng='-81.425684' WHERE address_id = 91
+2024/10/23 06:43:31 ---
+2024/10/23 06:43:31 Setting coordinates of 41.669282, -86.249797 for '602 SOUTH MICHIGAN ST South Bend IN 46601'.
+2024/10/23 06:43:31 UPDATE address SET lat='41.669282', lng='-86.249797' WHERE address_id = 92
+2024/10/23 06:43:32 ---
+2024/10/23 06:43:32 Setting coordinates of 39.830832, -84.894801 for '500 NORTH A STREET Richmond IN 47374'.
+2024/10/23 06:43:32 UPDATE address SET lat='39.830832', lng='-84.894801' WHERE address_id = 93
+2024/10/23 06:43:32 ---
+2024/10/23 06:43:32 Setting coordinates of 42.289540, -85.647575 for '317 SOUTH DRAKE ROAD Kalamazoo MI 49009'.
+2024/10/23 06:43:32 UPDATE address SET lat='42.289540', lng='-85.647575' WHERE address_id = 94
+2024/10/23 06:43:33 ---
+2024/10/23 06:43:33 Setting coordinates of 40.076426, -75.455745 for '105 Amity Way Wayne PA 19087'.
+2024/10/23 06:43:33 UPDATE address SET lat='40.076426', lng='-75.455745' WHERE address_id = 95
+2024/10/23 06:43:34 ---
+2024/10/23 06:43:34 Setting coordinates of 40.759535, -73.988998 for '305 W 45th St New York NY 10036'.
+2024/10/23 06:43:34 UPDATE address SET lat='40.759535', lng='-73.988998' WHERE address_id = 96
+2024/10/23 06:43:35 ---
+2024/10/23 06:43:35 Setting coordinates of 38.850297, -77.354305 for '11839 Federalist Way Fairfax VA 22030'.
+2024/10/23 06:43:35 UPDATE address SET lat='38.850297', lng='-77.354305' WHERE address_id = 97
+2024/10/23 06:43:35 ---
+2024/10/23 06:43:35 Setting coordinates of 40.743039, -74.039192 for '400 Monroe St Hoboken NJ 07030'.
+2024/10/23 06:43:35 UPDATE address SET lat='40.743039', lng='-74.039192' WHERE address_id = 98
+2024/10/23 06:43:36 ---
+2024/10/23 06:43:36 Setting coordinates of 40.775074, -73.988636 for '101 West End Avenue New York NY 10023'.
+2024/10/23 06:43:36 UPDATE address SET lat='40.775074', lng='-73.988636' WHERE address_id = 99
+2024/10/23 06:43:36 ---
+2024/10/23 06:43:36 Setting coordinates of 45.783875, -108.509561 for '2900 4TH AVE Billings MT 59101'.
+2024/10/23 06:43:36 UPDATE address SET lat='45.783875', lng='-108.509561' WHERE address_id = 100
+2024/10/23 06:43:36 ---
+2024/10/23 06:43:36 Setting coordinates of 41.527478, -88.079535 for '158 N SCOTT STREET Joliet IL 60432'.
+2024/10/23 06:43:36 UPDATE address SET lat='41.527478', lng='-88.079535' WHERE address_id = 101
+2024/10/23 06:43:37 ---
+2024/10/23 06:43:37 Setting coordinates of 39.143168, -88.526099 for '1207 NETWORK CENTRE DR Effingham IL 62401'.
+2024/10/23 06:43:37 UPDATE address SET lat='39.143168', lng='-88.526099' WHERE address_id = 102
+2024/10/23 06:43:37 ---
+2024/10/23 06:43:37 Setting coordinates of 42.448386, -96.357516 for '3555 SOUTHERN HILLS DR6 Sioux City IA 51106'.
+2024/10/23 06:43:37 UPDATE address SET lat='42.448386', lng='-96.357516' WHERE address_id = 103
+2024/10/23 06:43:38 ---
+2024/10/23 06:43:38 Setting coordinates of 41.135143, -100.760972 for '300 E 3RD ST North Platte NE 69101'.
+2024/10/23 06:43:38 UPDATE address SET lat='41.135143', lng='-100.760972' WHERE address_id = 104
+2024/10/23 06:43:38 ---
+2024/10/23 06:43:38 Setting coordinates of 40.918141, -98.377360 for '115 N WEBB RD Grand Island NE 68803'.
+2024/10/23 06:43:38 UPDATE address SET lat='40.918141', lng='-98.377360' WHERE address_id = 105
+2024/10/23 06:43:39 ---
+2024/10/23 06:43:39 Setting coordinates of 41.879485, -103.657146 for '415 VALLEY VIEW DR Scottsbluff NE 69361'.
+2024/10/23 06:43:39 UPDATE address SET lat='41.879485', lng='-103.657146' WHERE address_id = 106

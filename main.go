@@ -11,18 +11,11 @@ import (
 	"os"
 	"strconv"
 	"strings"
+	"time"
 
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
-
-// const (
-// 	host     = "192.168.86.58"
-// 	port     = 5432
-// 	user     = "pi"
-// 	password = "Boomer2025"
-// 	dbname   = "test"
-// )
 
 var (
 	address_id int
@@ -30,15 +23,12 @@ var (
 	city       string
 	state      string
 	zip        string
+	score      float64
 	lat        string
 	lng        string
 )
 
 type arcgisResults struct {
-	SpatialReference struct {
-		Wkid       int `json:"wkid"`
-		LatestWkid int `json:"latestWkid"`
-	} `json:"spatialReference"`
 	Candidates []struct {
 		Address  string `json:"address"`
 		Location struct {
@@ -48,20 +38,23 @@ type arcgisResults struct {
 		Score      float64 `json:"score"`
 		Attributes struct {
 		} `json:"attributes"`
-		// Extent struct {
-		// 	Xmin float64 `json:"xmin"`
-		// 	Ymin float64 `json:"ymin"`
-		// 	Xmax float64 `json:"xmax"`
-		// 	Ymax float64 `json:"ymax"`
-		// } `json:"extent"`
 	} `json:"candidates"`
 }
 
 func main() {
 
+	//--- Initialize LOGGING
+	now := time.Now()
+	log_filename_string := now.Format("2006-01-02_15-04-05")
+	file, err := os.OpenFile("geocoding_log_"+log_filename_string+".txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	if err != nil {
+		log.Fatal(err)
+	}
+	log.SetOutput(file)
+
 	//--- Get the CREDENTIALS from the env file.
 	if err := godotenv.Load(); err != nil {
-		log.Println("No .env file found")
+		log.Fatal("No .env file found")
 	}
 
 	host := os.Getenv("DATABASE_HOST")
@@ -73,10 +66,10 @@ func main() {
 	//--- Make the POSTGRES connection.
 	psqlInfo := fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
 	db, err := sql.Open("postgres", psqlInfo)
-	//log.Println("Made connection to " + host)
+	log.Println("Made connection to " + host)
 	if err != nil {
-		//log.Println("Connection to " + host + " failed!")
-		//log.Println(err)
+		log.Println("Connection to " + host + " failed!")
+		log.Println(err)
 		panic(err)
 	}
 	defer db.Close()
@@ -85,19 +78,19 @@ func main() {
 	//--- MT: Should this be a custom function in the database?
 	var sbSql strings.Builder
 	sbSql.WriteString("SELECT ")
-	sbSql.WriteString("		address_id, street, city, state, zip ")
+	sbSql.WriteString(" address_id, street, city, state, zip ")
 	sbSql.WriteString("FROM ")
-	sbSql.WriteString("		address ")
+	sbSql.WriteString(" address ")
 	sbSql.WriteString("WHERE ")
-	sbSql.WriteString("		(lat is null and lng is null) ")
-	sbSql.WriteString("order by address_id desc ")
+	sbSql.WriteString(" (lat is null and lng is null) ")
+	sbSql.WriteString("order by address_id ASC ")
 
 	strSql := sbSql.String()
 	rows, err := db.Query(strSql)
 	if err != nil {
-		//log.Println("Query failed!")
-		//log.Printin(strSQL)
-		//log.Println(err)
+		log.Println("Query failed!")
+		log.Println(strSql)
+		log.Println(err)
 		panic(err)
 	}
 	defer rows.Close()
@@ -106,6 +99,7 @@ func main() {
 	for rows.Next() {
 		err := rows.Scan(&address_id, &street, &city, &state, &zip)
 		if err != nil {
+			log.Fatal(err)
 			panic(err)
 		}
 		//--- Create a full_address string
@@ -116,6 +110,8 @@ func main() {
 		sbArcGis.WriteString("https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/")
 		sbArcGis.WriteString("findAddressCandidates?f=pjson&SingleLine=" + (url.QueryEscape(full_address)))
 		sbArcGis.WriteString("&outFields=x,y")
+
+		//--- Form the URL
 		arcgisUrl := sbArcGis.String()
 
 		//--- Fire off the API request.
@@ -123,43 +119,63 @@ func main() {
 
 		//--- Do a little dance here to get the results into the arcgisResults object
 		if err != nil {
-			fmt.Println(err)
+			log.Println(err)
 		}
 		defer resp.Body.Close()
 		body, err := io.ReadAll(resp.Body)
 		if err != nil {
+			log.Fatal(err)
 			panic(err)
 		}
 		var result arcgisResults
 
 		//--- Error handling, please.
 		if err := json.Unmarshal(body, &result); err != nil { // Parse []byte to the go struct pointer
-			fmt.Println("Can not unmarshal JSON")
+			log.Println("Can not unmarshal JSON")
 		}
 
 		//--- Get the lat and lng from the response
 		lat := fmt.Sprintf("%f", result.Candidates[0].Location.Y)
 		lng := fmt.Sprintf("%f", result.Candidates[0].Location.X)
+		score := result.Candidates[0].Score
 
-		//--- Build an UPDATE statment for each record that needs it.
-		//--- MT: Also a store proc in the database?
-		var sbSqlUpdate strings.Builder
-		sbSqlUpdate.WriteString("UPDATE address SET ")
-		sbSqlUpdate.WriteString("lat=" + lat)
-		sbSqlUpdate.WriteString(", lng=" + lng)
-		sbSqlUpdate.WriteString(" WHERE address_id = " + strconv.Itoa(address_id))
+		if score < 80 {
+			log.Println("---")
+			log.Println("Score too low (" + fmt.Sprintf("%f", score) + ") to update with coordinates for '" + full_address + "'.")
+		} else {
+			//--- Build an UPDATE statment for each record that needs it.
+			//--- MT: Also a stored proc in the database?
+			var sbSqlUpdate strings.Builder
+			sbSqlUpdate.WriteString("UPDATE address SET ")
+			sbSqlUpdate.WriteString("lat='" + lat + "'")
+			sbSqlUpdate.WriteString(", lng='" + lng + "'")
+			sbSqlUpdate.WriteString(" WHERE address_id = " + strconv.Itoa(address_id))
 
-		//--- Run the UPDATEs against the database.
-		fmt.Println(sbSqlUpdate.String())
+			//--- Form the SQL
+			strUpdateSql := sbSqlUpdate.String()
+
+			//--- Run the UPDATEs against the database.
+			_, err := db.Exec(strUpdateSql)
+			if err != nil {
+				log.Fatal(err)
+				panic(err)
+			} else {
+				log.Println("---")
+				log.Println("Setting coordinates of " + lat + ", " + lng + " for '" + full_address + "'.")
+				log.Println(strUpdateSql)
+			}
+		}
 
 	}
 	err = rows.Err()
 	if err != nil {
+		log.Fatal(err)
 		panic(err)
 	}
 
 	err = db.Ping()
 	if err != nil {
+		log.Fatal(err)
 		panic(err)
 	}
 

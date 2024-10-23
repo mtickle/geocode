@@ -1,0 +1,3 @@
+UPDATE address set lat = NULL, lng = NULL;
+
+SELECT * from address;
